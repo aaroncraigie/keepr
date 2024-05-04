@@ -77,12 +77,6 @@ describe Keepr::Account do
       expect(account.errors.added?(:kind, :group_mismatch)).to eq(true)
     end
 
-    it 'should not allow assigning forward account to asset group' do
-      account = FactoryBot.build(:account, kind: :forward, keepr_group: asset_group)
-      expect(account).to_not be_valid
-      expect(account.errors.added?(:kind, :group_conflict)).to eq(true)
-    end
-
     it 'should allow target match' do
       account = FactoryBot.build(:account, kind: :asset, keepr_group: asset_group)
       expect(account).to be_valid

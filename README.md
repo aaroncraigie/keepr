@@ -56,7 +56,7 @@ principles. To create an account, use the following format:
 
 "kind" is one of following values:
 
-	[asset liability revenue expense forward debtor creditor]
+	[asset liability revenue expense equity temporary]
 
 Accounts can have "child" accounts. All entries posted in a child account will
 be shown in the "parent" account as well. To create a child account:

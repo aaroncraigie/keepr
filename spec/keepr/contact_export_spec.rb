@@ -4,8 +4,6 @@ require 'spec_helper'
 
 describe Keepr::ContactExport do
   let!(:account_1000)  { FactoryBot.create :account, kind: :asset,     number: 1000, name: 'Kasse' }
-  let!(:account_10000) { FactoryBot.create :account, kind: :creditor,  number: 10_000, name: 'Meyer GmbH' }
-  let!(:account_70000) { FactoryBot.create :account, kind: :debtor,    number: 70_000, name: 'Schulze AG' }
 
   let(:scope) { Keepr::Account.all }
 
