@@ -19,7 +19,7 @@ class Keepr::Account < ActiveRecord::Base
   belongs_to :keepr_group, class_name: 'Keepr::Group'
   belongs_to :accountable, polymorphic: true
 
-  default_scope { order(:number) }
+  # default_scope { order(:number) }
 
   def self.with_sums(options = {})
     raise ArgumentError unless options.is_a?(Hash)
